@@ -35,14 +35,6 @@ INSTRUCTIONS = {
 }
 
 
-BANK = {
-    'default': Puzzle('default'),
-    'expert': Puzzle('expert'),
-    'flash': Puzzle('flash'),
-    'two': Puzzle('two_solutions')
-}
-
-
 def giveHint(puzzle, solution, finished):
     print("Enter a row and a column (separated by a space). ")
     (row, col) = list(map(int, input().split()))
@@ -241,8 +233,3 @@ def mainMenu(bank):
         user_input = input().lower()
 
     print("Good game.")
-
-
-if __name__ == '__main__':
-    print("Welcome to Sudoku!")
-    mainMenu(BANK)

@@ -39,7 +39,6 @@ class Puzzle():
         with open(filename, 'r') as csvpuzzle:
             all_values = csv.reader(csvpuzzle, delimiter = ',')
             for row in all_values:
-                print(row)
                 row = list(map(int,row))
                 self.values.append(row)
                 

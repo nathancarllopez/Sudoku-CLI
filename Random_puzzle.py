@@ -5,12 +5,6 @@ Random puzzle function
 import random
 from Puzzle_Class import Puzzle
 
-BLANK = Puzzle('blank')
-TWO = Puzzle('two_solutions')
-FLASH = Puzzle('flash')
-
-TEST_PUZZLES = [BLANK, TWO, FLASH]
-
 def solutionCollect(puzzle):
     solutions = []
     num_solutions = len(solutions)
@@ -81,10 +75,3 @@ def randomPuzzle():
                 empty_slots.append((rand_row, rand_col))
                 # print(random_puzzle)
             random_puzzle_options = random_puzzle.options()
-
-
-if __name__ == '__main__':
-    r_puzzle = randomPuzzle()
-    print("Puzzle:\n", r_puzzle)
-    print("Solved:")
-    print(r_puzzle.solve())
